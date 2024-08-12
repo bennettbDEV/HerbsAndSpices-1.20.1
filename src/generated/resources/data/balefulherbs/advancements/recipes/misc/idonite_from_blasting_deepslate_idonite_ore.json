@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_idonite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "balefulherbs:deepslate_idonite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "balefulherbs:idonite_from_blasting_deepslate_idonite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_idonite_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "balefulherbs:idonite_from_blasting_deepslate_idonite_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,12 @@
+{
+  "type": "balefulherbs:herb_pulverising",
+  "ingredients": [
+    {
+      "item": "balefulherbs:kemp"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "balefulherbs:kemp_powder"
+  }
+}

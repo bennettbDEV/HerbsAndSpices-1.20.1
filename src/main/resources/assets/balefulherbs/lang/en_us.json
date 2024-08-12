@@ -1,0 +1,24 @@
+{
+  "item.balefulherbs.mewstone": "Mewstone",
+  "item.balefulherbs.maostone": "Maostone",
+  "item.balefulherbs.idonite": "Idonite",
+
+  "item.balefulherbs.silver_speedberry": "Silver Speedberry",
+  "item.balefulherbs.silver_speedberry_powder": "Silver Speedberry Powder",
+  "item.balefulherbs.silver_speedberry_seeds": "Silver Speedberry Seeds",
+  "item.balefulherbs.kemp": "Kemp",
+  "item.balefulherbs.kemp_powder": "Kemp Powder",
+  "item.balefulherbs.kemp_seeds": "Kemp Seeds",
+
+
+  "block.balefulherbs.idonite_ore": "Idonite Ore",
+  "block.balefulherbs.deepslate_idonite_ore": "Deepslate Idonite Ore",
+  "block.balefulherbs.idonite_block": "Block of Idonite",
+  "block.balefulherbs.herb_pulveriser": "Herb Pulveriser",
+
+  "entity.minecraft.villager.balefulherbs.outcast": "Outcast",
+
+  "tooltip.balefulherbs.silver_speedberry.tooltip": "Speeds you up!",
+
+  "creativetab.balefulherbs_tab": "Baleful Herbs & Spices"
+}

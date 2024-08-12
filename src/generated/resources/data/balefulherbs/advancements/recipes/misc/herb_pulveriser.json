@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kemp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "balefulherbs:kemp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "balefulherbs:herb_pulveriser"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kemp",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "balefulherbs:herb_pulveriser"
+    ]
+  },
+  "sends_telemetry_event": false
+}

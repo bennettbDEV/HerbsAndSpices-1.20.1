@@ -43,7 +43,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Crops
         //Remember to look at VanillaBlockLoot class to see how its done in vanilla
-        // C:\Users\Bennett\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.5_mapped_parchment_2023.06.26-1.20.1\forge-1.20.1-47.3.5_mapped_parchment_2023.06.26-1.20.1-recomp.jar!\net\minecraft\data\loot\packs\VanillaBlockLoot.class
+        // .gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.5_mapped_parchment_2023.06.26-1.20.1\forge-1.20.1-47.3.5_mapped_parchment_2023.06.26-1.20.1-recomp.jar!\net\minecraft\data\loot\packs\VanillaBlockLoot.class
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.SILVER_SPEEDBERRY_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SilverSpeedBerryCropBlock.AGE, 4));

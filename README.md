@@ -16,7 +16,7 @@
 
 <div align="center">
   <a>
-    <img src="readme_images/herb_mod.png" alt="showcase">
+    <img src="readme_images/Herb_mod.png" alt="showcase">
   </a>
 </div>
 

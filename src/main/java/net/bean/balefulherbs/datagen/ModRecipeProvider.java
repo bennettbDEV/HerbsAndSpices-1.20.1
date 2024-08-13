@@ -46,7 +46,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         //Shaped crafting for Herb pulveriser
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HERB_PULVERISER.get())
                 .pattern("IKI")
                 .pattern("CPC")
@@ -56,6 +55,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Blocks.COBBLESTONE)
                 .define('P', Items.IRON_PICKAXE)
                 .unlockedBy(getHasName(ModItems.KEMP.get()), has(ModItems.KEMP.get()))
+                .save(pWriter);
+
+        //Shaped crafting for Herb shaper
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.HERB_SHAPER.get())
+                .pattern("IDI")
+                .pattern("CHC")
+                .pattern("CCC")
+                .define('I', Items.IRON_INGOT)
+                .define('D', Items.DIAMOND)
+                .define('C', Blocks.COBBLESTONE)
+                .define('H', Items.IRON_HOE)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
                 .save(pWriter);
 
         //Shapeless Crafting for Idonite from Idonite Block

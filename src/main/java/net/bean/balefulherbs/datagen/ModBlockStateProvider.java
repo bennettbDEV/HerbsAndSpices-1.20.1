@@ -31,6 +31,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.HERB_PULVERISER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/herb_pulveriser")));
+        simpleBlockWithItem(ModBlocks.HERB_SHAPER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/herb_shaper")));
 
         makeSilver_SpeedBerryCrop((CropBlock) ModBlocks.SILVER_SPEEDBERRY_CROP.get(), "silver_speedberry_stage", "silver_speedberry_stage");
         makeKempCrop((CropBlock) ModBlocks.KEMP_CROP.get(), "kemp_stage", "kemp_stage");

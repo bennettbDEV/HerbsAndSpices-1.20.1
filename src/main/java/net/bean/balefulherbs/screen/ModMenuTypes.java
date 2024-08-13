@@ -17,6 +17,8 @@ public class ModMenuTypes
 
     public static final RegistryObject<MenuType<HerbPulveriserMenu>> HERB_PULVERISING_MENU =
             registerMenuType("herb_pulverising_menu", HerbPulveriserMenu::new);
+    public static final RegistryObject<MenuType<HerbShaperMenu>> HERB_SHAPING_MENU =
+            registerMenuType("herb_shaping_menu", HerbShaperMenu::new);
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

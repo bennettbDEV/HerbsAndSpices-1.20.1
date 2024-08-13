@@ -1,6 +1,6 @@
 package net.bean.balefulherbs.block.custom;
 
-import net.bean.balefulherbs.block.entity.HerbPulveriserBlockEntity;
+import net.bean.balefulherbs.block.entity.HerbShaperBlockEntity;
 import net.bean.balefulherbs.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -15,21 +15,20 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
-public class HerbPulveriserBlock extends BaseEntityBlock
+public class HerbShaperBlock extends BaseEntityBlock
 {
 
-    public HerbPulveriserBlock(Properties pProperties) {
+    public HerbShaperBlock(Properties pProperties) {
         super(pProperties);
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new HerbPulveriserBlockEntity(pPos,pState);
+        return new HerbShaperBlockEntity(pPos,pState);
     }
 
     @Override
@@ -44,8 +43,8 @@ public class HerbPulveriserBlock extends BaseEntityBlock
         if (pState.getBlock() != pNewState.getBlock())
         {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof HerbPulveriserBlockEntity) {
-                ((HerbPulveriserBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof HerbShaperBlockEntity) {
+                ((HerbShaperBlockEntity) blockEntity).drops();
             }
         }
 
@@ -58,8 +57,8 @@ public class HerbPulveriserBlock extends BaseEntityBlock
         if (!pLevel.isClientSide())
         {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof HerbPulveriserBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (HerbPulveriserBlockEntity)entity, pPos);
+            if(entity instanceof HerbShaperBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (HerbShaperBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -76,7 +75,7 @@ public class HerbPulveriserBlock extends BaseEntityBlock
             return null;
         }
 
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.HERB_PULVERISER_BE.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.HERB_SHAPER_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
 

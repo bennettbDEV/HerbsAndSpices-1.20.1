@@ -19,10 +19,12 @@ public class ModCreativeModTabs
                     .title(Component.translatable("creativetab.balefulherbs_tab"))
                     .displayItems((pParameters, pOutput) ->
                     {
-
                         pOutput.accept(ModItems.MEWSTONE.get());
                         pOutput.accept(ModItems.MAOSTONE.get());
+
                         pOutput.accept(ModItems.IDONITE.get());
+                        pOutput.accept(ModItems.IDONITE_POWDER.get());
+                        pOutput.accept(ModItems.REFINED_IDONITE.get());
 
                         pOutput.accept(ModBlocks.IDONITE_BLOCK.get());
                         pOutput.accept(ModBlocks.IDONITE_ORE.get());
@@ -30,12 +32,15 @@ public class ModCreativeModTabs
 
                         pOutput.accept(ModItems.SILVER_SPEEDBERRY.get());
                         pOutput.accept(ModItems.SILVER_SPEEDBERRY_POWDER.get());
+                        pOutput.accept(ModItems.REFINED_SILVER_SPEEDBERRY.get());
                         pOutput.accept(ModItems.SILVER_SPEEDBERRY_SEEDS.get());
                         pOutput.accept(ModItems.KEMP.get());
                         pOutput.accept(ModItems.KEMP_POWDER.get());
+                        pOutput.accept(ModItems.REFINED_KEMP.get());
                         pOutput.accept(ModItems.KEMP_SEEDS.get());
 
                         pOutput.accept(ModBlocks.HERB_PULVERISER.get());
+                        pOutput.accept(ModBlocks.HERB_SHAPER.get());
                     })
                     .build());
 

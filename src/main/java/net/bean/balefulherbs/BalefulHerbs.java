@@ -8,6 +8,7 @@ import net.bean.balefulherbs.item.ModItems;
 import net.bean.balefulherbs.loot.ModLootModifiers;
 import net.bean.balefulherbs.recipe.ModRecipes;
 import net.bean.balefulherbs.screen.HerbPulveriserScreen;
+import net.bean.balefulherbs.screen.HerbShaperScreen;
 import net.bean.balefulherbs.screen.ModMenuTypes;
 import net.bean.balefulherbs.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -75,6 +76,7 @@ public class BalefulHerbs
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.HERB_PULVERISING_MENU.get(), HerbPulveriserScreen::new);
+            MenuScreens.register(ModMenuTypes.HERB_SHAPING_MENU.get(), HerbShaperScreen::new);
         }
     }
 }

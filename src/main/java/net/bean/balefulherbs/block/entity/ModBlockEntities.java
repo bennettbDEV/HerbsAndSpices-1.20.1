@@ -17,6 +17,10 @@ public class ModBlockEntities
             BLOCK_ENTITIES.register("herb_pulveriser_be", () ->
                     BlockEntityType.Builder.of(HerbPulveriserBlockEntity::new,
                             ModBlocks.HERB_PULVERISER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<HerbShaperBlockEntity>> HERB_SHAPER_BE =
+            BLOCK_ENTITIES.register("herb_shaper_be", () ->
+                    BlockEntityType.Builder.of(HerbShaperBlockEntity::new,
+                            ModBlocks.HERB_SHAPER.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

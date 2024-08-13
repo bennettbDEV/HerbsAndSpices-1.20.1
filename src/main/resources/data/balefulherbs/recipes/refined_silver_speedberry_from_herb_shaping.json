@@ -1,0 +1,12 @@
+{
+  "type": "balefulherbs:herb_shaping",
+  "ingredients": [
+    {
+      "item": "balefulherbs:silver_speedberry_powder"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "balefulherbs:refined_silver_speedberry"
+  }
+}

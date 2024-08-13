@@ -18,17 +18,22 @@ public class ModItemModelProvider extends ItemModelProvider
     @Override
     protected void registerModels()
     {
-        simpleItem(ModItems.IDONITE);
         simpleItem(ModItems.MAOSTONE);
         simpleItem(ModItems.MEWSTONE);
+
+        simpleItem(ModItems.IDONITE);
+        simpleItem(ModItems.IDONITE_POWDER);
+        simpleItem(ModItems.REFINED_IDONITE);
 
         simpleItem(ModItems.SILVER_SPEEDBERRY_SEEDS);
         simpleItem(ModItems.SILVER_SPEEDBERRY);
         simpleItem(ModItems.SILVER_SPEEDBERRY_POWDER);
+        simpleItem(ModItems.REFINED_SILVER_SPEEDBERRY);
 
         simpleItem(ModItems.KEMP_SEEDS);
         simpleItem(ModItems.KEMP);
         simpleItem(ModItems.KEMP_POWDER);
+        simpleItem(ModItems.REFINED_KEMP);
 
     }
 

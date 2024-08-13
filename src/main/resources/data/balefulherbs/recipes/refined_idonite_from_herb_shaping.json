@@ -1,0 +1,13 @@
+{
+  "type": "balefulherbs:herb_shaping",
+  "ingredients": [
+    {
+      "item": "balefulherbs:idonite_powder",
+      "count": 3
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "balefulherbs:refined_idonite"
+  }
+}

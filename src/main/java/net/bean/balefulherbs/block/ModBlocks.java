@@ -1,9 +1,6 @@
 package net.bean.balefulherbs.block;
 
-import net.bean.balefulherbs.block.custom.HerbPulveriserBlock;
-import net.bean.balefulherbs.block.custom.KempCropBlock;
-import net.bean.balefulherbs.block.custom.SoundBlock;
-import net.bean.balefulherbs.block.custom.SilverSpeedBerryCropBlock;
+import net.bean.balefulherbs.block.custom.*;
 import net.bean.balefulherbs.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -43,9 +40,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HERB_PULVERISER = registerBlock("herb_pulveriser",
             () -> new HerbPulveriserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-
-
-
+    public static final RegistryObject<Block> HERB_SHAPER = registerBlock("herb_shaper",
+            () -> new HerbShaperBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
 

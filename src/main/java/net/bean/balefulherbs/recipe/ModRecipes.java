@@ -13,6 +13,8 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<HerbPulverisingRecipe>> HERB_PULVERISING_SERIALIZER =
             SERIALIZERS.register("herb_pulverising", () -> HerbPulverisingRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<HerbShapingRecipe>> HERB_SHAPING_SERIALIZER =
+            SERIALIZERS.register("herb_shaping", () -> HerbShapingRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

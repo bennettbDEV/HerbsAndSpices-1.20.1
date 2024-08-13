@@ -34,6 +34,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Normal blocks
         this.dropSelf(ModBlocks.IDONITE_BLOCK.get());
         this.dropSelf(ModBlocks.HERB_PULVERISER.get());
+        this.dropSelf(ModBlocks.HERB_SHAPER.get());
 
         //Ores
         this.add(ModBlocks.IDONITE_ORE.get(),

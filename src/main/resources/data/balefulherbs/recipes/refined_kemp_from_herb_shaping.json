@@ -1,0 +1,12 @@
+{
+  "type": "balefulherbs:herb_shaping",
+  "ingredients": [
+    {
+      "item": "balefulherbs:kemp_powder"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "balefulherbs:refined_kemp"
+  }
+}

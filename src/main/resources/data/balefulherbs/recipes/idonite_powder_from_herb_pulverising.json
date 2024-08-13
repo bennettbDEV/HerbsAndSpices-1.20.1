@@ -1,0 +1,12 @@
+{
+  "type": "balefulherbs:herb_pulverising",
+  "ingredients": [
+    {
+      "item": "balefulherbs:idonite"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "balefulherbs:idonite_powder"
+  }
+}

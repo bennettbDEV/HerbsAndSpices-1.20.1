@@ -4,10 +4,12 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.bean.balefulherbs.BalefulHerbs;
 import net.bean.balefulherbs.item.ModItems;
 import net.bean.balefulherbs.villager.ModVillagers;
+
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,7 +45,18 @@ public class ModEvents
                     new ItemStack(ModItems.IDONITE.get(), 2),
                     2, 12, 0.075f));
         }
-
     }
+
+    /*
+    @SubscribeEvent
+    public static void onConsumption(LivingEntityUseItemEvent.Finish event)
+    {
+        if(event.getEntity() instanceof Player player) {
+            player.sendSystemMessage(Component.literal(player.getName().getString() + " ate:"));
+        }
+    }
+
+     */
+
 
 }

@@ -14,7 +14,6 @@ public class ModItems
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, net.bean.balefulherbs.BalefulHerbs.MOD_ID);
 
-
     //New items
     public static final RegistryObject<Item> MEWSTONE = ITEMS.register("mewstone",
             () -> new Item(new Item.Properties()));
@@ -22,11 +21,11 @@ public class ModItems
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> IDONITE = ITEMS.register("idonite",
-            () -> new Item(new Item.Properties().food(ModFoods.IDONITE)));
+            () -> new HerbItem("idonite", new Item.Properties().food(ModFoods.IDONITE)));
     public static final RegistryObject<Item> IDONITE_POWDER = ITEMS.register("idonite_powder",
-            () -> new Item(new Item.Properties().food(ModFoods.IDONITE_POWDER)));
+            () -> new HerbItem("idonite_powder", new Item.Properties().food(ModFoods.IDONITE_POWDER)));
     public static final RegistryObject<Item> REFINED_IDONITE = ITEMS.register("refined_idonite",
-            () -> new Item(new Item.Properties().food(ModFoods.REFINED_IDONITE)));
+            () -> new HerbItem("refined_idonite", new Item.Properties().food(ModFoods.REFINED_IDONITE)));
 
     public static final RegistryObject<Item> SILVER_SPEEDBERRY = ITEMS.register("silver_speedberry",
             () -> new HerbItem("silver_speedberry", new Item.Properties().food(ModFoods.SILVER_SPEEDBERRY)));

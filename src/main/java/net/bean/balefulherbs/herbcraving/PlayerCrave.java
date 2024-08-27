@@ -34,7 +34,6 @@ public class PlayerCrave
     HashMap<String, Long> hashMap = new HashMap<>();
     {
         hashMap.put("kemp", 0L);
-        /*
         hashMap.put("kemp_powder", 0L);
         hashMap.put("refined_kemp", 0L);
 
@@ -45,8 +44,6 @@ public class PlayerCrave
         hashMap.put("idonite", 0L);
         hashMap.put("idonite_powder", 0L);
         hashMap.put("refined_idonite", 0L);
-
-         */
     }
 
     public void setConsumedTime(String key, long time) {

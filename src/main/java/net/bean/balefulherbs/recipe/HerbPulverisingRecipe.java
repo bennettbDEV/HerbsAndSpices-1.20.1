@@ -14,23 +14,25 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class HerbPulverisingRecipe implements Recipe<SimpleContainer> {
+public class HerbPulverisingRecipe implements Recipe<SimpleContainer>
+{
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
 
-    public HerbPulverisingRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id) {
+    public HerbPulverisingRecipe(NonNullList<Ingredient> inputItems, ItemStack output, ResourceLocation id)
+    {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
     }
 
     @Override
-    public boolean matches(SimpleContainer pContainer, Level pLevel) {
+    public boolean matches(SimpleContainer pContainer, Level pLevel)
+    {
         if(pLevel.isClientSide()) {
             return false;
         }
-
         return inputItems.get(0).test(pContainer.getItem(0));
     }
 
@@ -69,17 +71,20 @@ public class HerbPulverisingRecipe implements Recipe<SimpleContainer> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<HerbPulverisingRecipe> {
+    public static class Type implements RecipeType<HerbPulverisingRecipe>
+    {
         public static final Type INSTANCE = new Type();
         public static final String ID = "herb_pulverising";
     }
 
-    public static class Serializer implements RecipeSerializer<HerbPulverisingRecipe> {
+    public static class Serializer implements RecipeSerializer<HerbPulverisingRecipe>
+    {
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID = new ResourceLocation(BalefulHerbs.MOD_ID, "herb_pulverising");
 
         @Override
-        public HerbPulverisingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe) {
+        public HerbPulverisingRecipe fromJson(ResourceLocation pRecipeId, JsonObject pSerializedRecipe)
+        {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(pSerializedRecipe, "ingredients");
@@ -93,7 +98,8 @@ public class HerbPulverisingRecipe implements Recipe<SimpleContainer> {
         }
 
         @Override
-        public @Nullable HerbPulverisingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
+        public @Nullable HerbPulverisingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer)
+        {
             NonNullList<Ingredient> inputs = NonNullList.withSize(pBuffer.readInt(), Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
@@ -105,7 +111,8 @@ public class HerbPulverisingRecipe implements Recipe<SimpleContainer> {
         }
 
         @Override
-        public void toNetwork(FriendlyByteBuf pBuffer, HerbPulverisingRecipe pRecipe) {
+        public void toNetwork(FriendlyByteBuf pBuffer, HerbPulverisingRecipe pRecipe)
+        {
             pBuffer.writeInt(pRecipe.inputItems.size());
 
             for (Ingredient ingredient : pRecipe.getIngredients()) {

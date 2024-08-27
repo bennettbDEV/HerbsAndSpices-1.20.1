@@ -28,7 +28,6 @@ public class PlayerCraveProvider implements ICapabilityProvider, ICapabilitySeri
     {
         CompoundTag tag = new CompoundTag();
         tag.putLong("KempConsumedTime", playercrave.getConsumedTime("kemp"));
-        /*
         tag.putLong("KempPowderConsumedTime", playercrave.getConsumedTime("kemp_powder"));
         tag.putLong("RefinedKempConsumedTime", playercrave.getConsumedTime("refined_kemp"));
 
@@ -36,7 +35,10 @@ public class PlayerCraveProvider implements ICapabilityProvider, ICapabilitySeri
         tag.putLong("SilverSpeedberryPowderConsumedTime", playercrave.getConsumedTime("silver_speedberry_powder"));
         tag.putLong("RefinedSilverSpeedberryConsumedTime", playercrave.getConsumedTime("refined_silver_speedberry"));
 
-         */
+        tag.putLong("IdoniteConsumedTime", playercrave.getConsumedTime("idonite"));
+        tag.putLong("IdonitePowderConsumedTime", playercrave.getConsumedTime("idonite_powder"));
+        tag.putLong("RefinedIdoniteConsumedTime", playercrave.getConsumedTime("refined_idonite"));
+
         return tag;
     }
 
@@ -44,7 +46,6 @@ public class PlayerCraveProvider implements ICapabilityProvider, ICapabilitySeri
     public void deserializeNBT(CompoundTag nbt)
     {
         playercrave.setConsumedTime("kemp", nbt.getLong("KempConsumedTime"));
-        /*
         playercrave.setConsumedTime("kemp_powder", nbt.getLong("KempPowderConsumedTime"));
         playercrave.setConsumedTime("refined_kemp", nbt.getLong("RefinedKempConsumedTime"));
 
@@ -52,7 +53,9 @@ public class PlayerCraveProvider implements ICapabilityProvider, ICapabilitySeri
         playercrave.setConsumedTime("silver_speedberry_powder", nbt.getLong("SilverSpeedberryPowderConsumedTime"));
         playercrave.setConsumedTime("refined_silver_speedberry", nbt.getLong("RefinedSilverSpeedberryConsumedTime"));
 
-         */
+        playercrave.setConsumedTime("idonite", nbt.getLong("IdoniteConsumedTime"));
+        playercrave.setConsumedTime("idonite_powder", nbt.getLong("IdonitePowderConsumedTime"));
+        playercrave.setConsumedTime("refined_idonite", nbt.getLong("RefinedIdoniteConsumedTime"));
     }
 }
 

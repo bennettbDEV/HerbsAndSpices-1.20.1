@@ -3,6 +3,7 @@ package net.bean.balefulherbs;
 import com.mojang.logging.LogUtils;
 import net.bean.balefulherbs.block.ModBlocks;
 import net.bean.balefulherbs.block.entity.ModBlockEntities;
+import net.bean.balefulherbs.herbcraving.ModCapabilities;
 import net.bean.balefulherbs.item.ModCreativeModTabs;
 import net.bean.balefulherbs.item.ModItems;
 import net.bean.balefulherbs.loot.ModLootModifiers;
@@ -47,9 +48,11 @@ public class BalefulHerbs
         ModRecipes.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(ModCapabilities::registerCapabilities);
         modEventBus.addListener(this::addCreative);
     }
 

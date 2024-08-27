@@ -12,7 +12,8 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class HerbPulveriserMenu extends AbstractContainerMenu {
+public class HerbPulveriserMenu extends AbstractContainerMenu
+{
     public final HerbPulveriserBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
@@ -21,7 +22,8 @@ public class HerbPulveriserMenu extends AbstractContainerMenu {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public HerbPulveriserMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+    public HerbPulveriserMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data)
+    {
         super(ModMenuTypes.HERB_PULVERISING_MENU.get(), pContainerId);
         checkContainerSize(inv, 2);
         blockEntity = ((HerbPulveriserBlockEntity) entity);
@@ -44,7 +46,8 @@ public class HerbPulveriserMenu extends AbstractContainerMenu {
         return data.get(0) > 0;
     }
 
-    public int getScaledProgress() {
+    public int getScaledProgress()
+    {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
         int progressArrowSize = 26; // This is the height in pixels of your arrow
@@ -79,18 +82,21 @@ public class HerbPulveriserMenu extends AbstractContainerMenu {
         ItemStack copyOfSourceStack = sourceStack.copy();
 
         // Check if the slot clicked is one of the vanilla container slots
-        if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
+        if (pIndex < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT)
+        {
             // This is a vanilla container slot so merge the stack into the tile inventory
             if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
                     + TE_INVENTORY_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;  // EMPTY_ITEM
             }
-        } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
+        } else if (pIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT)
+        {
             // This is a TE slot so merge the stack into the players inventory
             if (!moveItemStackTo(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
-        } else {
+        } else
+        {
             System.out.println("Invalid slotIndex:" + pIndex);
             return ItemStack.EMPTY;
         }
@@ -105,12 +111,14 @@ public class HerbPulveriserMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
+    public boolean stillValid(Player pPlayer)
+    {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
                 pPlayer, ModBlocks.HERB_PULVERISER.get());
     }
 
-    private void addPlayerInventory(Inventory playerInventory) {
+    private void addPlayerInventory(Inventory playerInventory)
+    {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
                 this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
@@ -118,7 +126,8 @@ public class HerbPulveriserMenu extends AbstractContainerMenu {
         }
     }
 
-    private void addPlayerHotbar(Inventory playerInventory) {
+    private void addPlayerHotbar(Inventory playerInventory)
+    {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }

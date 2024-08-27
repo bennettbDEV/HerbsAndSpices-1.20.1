@@ -7,13 +7,13 @@ import net.minecraft.world.food.FoodProperties;
 public class ModFoods
 {
     //Dur of 20 is about a second
-    public static final int SILVER_SPEEDBERRY_EFFECT_DUR = 300;
-    public static final int SILVER_SPEEDBERRY_POWDER_EFFECT_DUR = 550;
-    public static final int REFINED_SILVER_SPEEDBERRY_EFFECT_DUR = 1200;
-
     public static final int KEMP_EFFECT_DUR = 300;
     public static final int KEMP_POWDER_EFFECT_DUR = 500;
     public static final int REFINED_KEMP_EFFECT_DUR = 1200;
+
+    public static final int SILVER_SPEEDBERRY_EFFECT_DUR = 300;
+    public static final int SILVER_SPEEDBERRY_POWDER_EFFECT_DUR = 550;
+    public static final int REFINED_SILVER_SPEEDBERRY_EFFECT_DUR = 1200;
 
     public static final int IDONITE_EFFECT_DUR = 450;
     public static final int IDONITE_POWDER_EFFECT_DUR = 600;

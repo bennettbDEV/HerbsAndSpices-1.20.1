@@ -7,11 +7,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class HerbItem extends Item {
+public class HerbItem extends Item
+{
+    private String key;
 
-    public HerbItem(Properties pProperties) {
-
+    public HerbItem(String name, Properties pProperties) {
         super(pProperties);
+        key = name;
     }
 
     @Override
@@ -19,15 +21,12 @@ public class HerbItem extends Item {
     {
         ItemStack itemstack = super.finishUsingItem(pStack, pLevel, pLivingEntity);
 
-        if (pLivingEntity instanceof Player player && !pLevel.isClientSide())
-        {
-            player.getCapability(ModCapabilities.PLAYER_CRAVE_CAPABILITY).ifPresent(
-                    data -> {
-                        data.setKempConsumedTime(pLevel.getGameTime());
-                    }
-            );
+        if (pLivingEntity instanceof Player player && !pLevel.isClientSide()) {
+            player.getCapability(ModCapabilities.PLAYER_CRAVE_CAPABILITY).ifPresent(data -> {
+                data.setConsumedTime(key, pLevel.getGameTime());
+            });
         }
-
         return itemstack;
     }
+
 }

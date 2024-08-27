@@ -1,8 +1,7 @@
 package net.bean.balefulherbs.item;
 
 import net.bean.balefulherbs.block.ModBlocks;
-import net.bean.balefulherbs.item.custom.KempItem;
-import net.bean.balefulherbs.item.custom.SilverSpeedberryItem;
+import net.bean.balefulherbs.item.custom.HerbItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,18 +29,18 @@ public class ModItems
             () -> new Item(new Item.Properties().food(ModFoods.REFINED_IDONITE)));
 
     public static final RegistryObject<Item> SILVER_SPEEDBERRY = ITEMS.register("silver_speedberry",
-            () -> new SilverSpeedberryItem(new Item.Properties().food(ModFoods.SILVER_SPEEDBERRY)));
+            () -> new HerbItem("silver_speedberry", new Item.Properties().food(ModFoods.SILVER_SPEEDBERRY)));
     public static final RegistryObject<Item> SILVER_SPEEDBERRY_POWDER = ITEMS.register("silver_speedberry_powder",
-            () -> new Item(new Item.Properties().food(ModFoods.SILVER_SPEEDBERRY_POWDER)));
+            () -> new HerbItem("silver_speedberry_powder", new Item.Properties().food(ModFoods.SILVER_SPEEDBERRY_POWDER)));
     public static final RegistryObject<Item> REFINED_SILVER_SPEEDBERRY = ITEMS.register("refined_silver_speedberry",
-            () -> new Item(new Item.Properties().food(ModFoods.REFINED_SILVER_SPEEDBERRY)));
+            () -> new HerbItem("refined_silver_speedberry", new Item.Properties().food(ModFoods.REFINED_SILVER_SPEEDBERRY)));
 
     public static final RegistryObject<Item> KEMP = ITEMS.register("kemp",
-            () -> new KempItem(new Item.Properties().food(ModFoods.KEMP)));
+            () -> new HerbItem("kemp", new Item.Properties().food(ModFoods.KEMP)));
     public static final RegistryObject<Item> KEMP_POWDER = ITEMS.register("kemp_powder",
-            () -> new Item(new Item.Properties().food(ModFoods.KEMP_POWDER)));
+            () -> new HerbItem("kemp_powder", new Item.Properties().food(ModFoods.KEMP_POWDER)));
     public static final RegistryObject<Item> REFINED_KEMP = ITEMS.register("refined_kemp",
-            () -> new Item(new Item.Properties().food(ModFoods.REFINED_KEMP)));
+            () -> new HerbItem("refined_kemp", new Item.Properties().food(ModFoods.REFINED_KEMP)));
 
     public static final RegistryObject<Item> SILVER_SPEEDBERRY_SEEDS = ITEMS.register("silver_speedberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.SILVER_SPEEDBERRY_CROP.get(), new Item.Properties()));

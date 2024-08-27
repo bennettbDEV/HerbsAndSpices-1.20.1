@@ -3,6 +3,7 @@ package net.bean.balefulherbs.event;
 
 import net.bean.balefulherbs.BalefulHerbs;
 import net.bean.balefulherbs.herbcraving.ModCapabilities;
+import net.bean.balefulherbs.herbcraving.PlayerCrave;
 import net.bean.balefulherbs.herbcraving.PlayerCraveProvider;
 import net.bean.balefulherbs.item.ModFoods;
 import net.minecraft.resources.ResourceLocation;
@@ -43,18 +44,41 @@ public class CraveEvents
                 long currentTime = event.player.level().getGameTime();
 
                 //Kemp
-                long kempConsumedTime = data.getKempConsumedTime();
+                long kempConsumedTime = data.getConsumedTime("kemp");
                 if (kempConsumedTime > 0 && currentTime - kempConsumedTime >= ModFoods.KEMP_EFFECT_DUR) {
-                    event.player.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 1));
-                    data.setKempConsumedTime(0);
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badKempEffect));
+                    data.setConsumedTime("kemp",0);
+                }
+                /*
+                long kempPowderConsumedTime = data.getConsumedTime("kemp_powder");
+                if (kempPowderConsumedTime > 0 && currentTime - kempPowderConsumedTime >= ModFoods.KEMP_POWDER_EFFECT_DUR) {
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badKempPowderEffect));
+                    data.setConsumedTime("kemp_powder",0);
+                }
+                long refinedKempConsumedTime = data.getConsumedTime("refined_kemp");
+                if (refinedKempConsumedTime > 0 && currentTime - refinedKempConsumedTime >= ModFoods.REFINED_KEMP_EFFECT_DUR) {
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badRefinedKempEffect));
+                    data.setConsumedTime("refined_kemp",0);
                 }
 
                 //Speedberry
                 long speedberryConsumedTime = data.getConsumedTime("silver_speedberry");
                 if (speedberryConsumedTime > 0 && currentTime - speedberryConsumedTime >= ModFoods.SILVER_SPEEDBERRY_EFFECT_DUR) {
-                    event.player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 1));
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badSilverSpeedberryEffect));
                     data.setConsumedTime("silver_speedberry",0);
                 }
+                long speedberryPowderConsumedTime = data.getConsumedTime("silver_speedberry_powder");
+                if (speedberryPowderConsumedTime > 0 && currentTime - speedberryPowderConsumedTime >= ModFoods.SILVER_SPEEDBERRY_POWDER_EFFECT_DUR) {
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badSilverSpeedberryPowderEffect));
+                    data.setConsumedTime("silver_speedberry_powder",0);
+                }
+                long refinedSpeedberryConsumedTime = data.getConsumedTime("silver_speedberry");
+                if (refinedSpeedberryConsumedTime > 0 && currentTime - refinedSpeedberryConsumedTime >= ModFoods.REFINED_SILVER_SPEEDBERRY_EFFECT_DUR) {
+                    event.player.addEffect(new MobEffectInstance(PlayerCrave.badRefinedSilverSpeedberryEffect));
+                    data.setConsumedTime("refined_silver_speedberry",0);
+                }
+
+                 */
             });
         }
     }

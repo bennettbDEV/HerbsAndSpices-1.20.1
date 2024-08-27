@@ -27,16 +27,32 @@ public class PlayerCraveProvider implements ICapabilityProvider, ICapabilitySeri
     public CompoundTag serializeNBT()
     {
         CompoundTag tag = new CompoundTag();
-        tag.putLong("KempConsumedTime", playercrave.getKempConsumedTime());
-        tag.putLong("SpeedberryConsumedTime", playercrave.getConsumedTime("silver_speedberry"));
+        tag.putLong("KempConsumedTime", playercrave.getConsumedTime("kemp"));
+        /*
+        tag.putLong("KempPowderConsumedTime", playercrave.getConsumedTime("kemp_powder"));
+        tag.putLong("RefinedKempConsumedTime", playercrave.getConsumedTime("refined_kemp"));
+
+        tag.putLong("SilverSpeedberryConsumedTime", playercrave.getConsumedTime("silver_speedberry"));
+        tag.putLong("SilverSpeedberryPowderConsumedTime", playercrave.getConsumedTime("silver_speedberry_powder"));
+        tag.putLong("RefinedSilverSpeedberryConsumedTime", playercrave.getConsumedTime("refined_silver_speedberry"));
+
+         */
         return tag;
     }
 
     @Override
     public void deserializeNBT(CompoundTag nbt)
     {
-        playercrave.setKempConsumedTime(nbt.getLong("KempConsumedTime"));
-        playercrave.setConsumedTime("silver_speedberry", nbt.getLong("SpeedberryConsumedTime"));
+        playercrave.setConsumedTime("kemp", nbt.getLong("KempConsumedTime"));
+        /*
+        playercrave.setConsumedTime("kemp_powder", nbt.getLong("KempPowderConsumedTime"));
+        playercrave.setConsumedTime("refined_kemp", nbt.getLong("RefinedKempConsumedTime"));
+
+        playercrave.setConsumedTime("silver_speedberry", nbt.getLong("SilverSpeedberryConsumedTime"));
+        playercrave.setConsumedTime("silver_speedberry_powder", nbt.getLong("SilverSpeedberryPowderConsumedTime"));
+        playercrave.setConsumedTime("refined_silver_speedberry", nbt.getLong("RefinedSilverSpeedberryConsumedTime"));
+
+         */
     }
 }
 

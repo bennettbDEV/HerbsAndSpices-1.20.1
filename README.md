@@ -26,7 +26,11 @@ As a programmer and a huge fan of countless Minecraft mods, I figured it's about
 Farming is a relaxing and satisfying part of Minecraft, but I wanted to change things up a bit and add harsh consequences 
 for the crops I add. 
 <br />
-... More info will be added soon ...
+
+<h3>Some basic things to know </h3>
+- Kemp seeds can be obtained by breaking grass - with a small chance that the seeds actually drop
+- Silver Speedberry naturally generates in the world and can be found in the plains biome
+- Idonite generates naturally and can be found at any y-level under 40
 
 
 ### Built With
@@ -41,13 +45,20 @@ for the crops I add.
 <br />
 For now, you can install and use the mod by following these steps:
 
-1. Download balefulherbs-0.X-1.20.1.jar from the root directory of this project
-2. Navigate to your mods folder and place the downloaded jar file within it
+- Download balefulherbs-0.X-1.20.1.jar from the root directory of this project
+- (Option 1) If you don't have Forge 1.20.1 installed already check out <a href="https://www.youtube.com/watch?v=VEyGJSE0XD8">this guide</a>
+  - Then navigate to your mods folder and place the downloaded jar file within it
+- (Option 2) You can also add the jar file to an existing modpack using a modloader such as Curseforge
+  - Open/Create a 1.20.1 modpack in CurseForge select it
+  - Click on the three dots next to "Play"
+  - Click on "Open Folder" <a><img src="readme_images/cf_guide_1.png" alt="showcase"></a>
+  - The folder will open and from there you can drop the balefulherbs-0.X-1.20.1.jar file into the mods folder <a><img src="readme_images/cf_guide_2.png" alt="showcase"></a>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] **Add consequence system for edible crops/ores**
+- [X] **Add bad aftereffects for edible crops/ores**
+- [ ] **Add consequence/crave system for edible crops/ores**
 - [ ] Add custom Outcast villager's house generation
 - [ ] Create mouse model
   - [ ] Add mouse mob

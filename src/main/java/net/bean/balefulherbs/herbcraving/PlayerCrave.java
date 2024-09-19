@@ -31,27 +31,27 @@ public class PlayerCrave
     public static final MobEffectInstance badIdonitePowderEffect = new MobEffectInstance(MobEffects.WEAKNESS, BAD_IDONITE_POWDER_EFFECT_DUR, 1);
     public static final MobEffectInstance badRefinedIdoniteEffect = new MobEffectInstance(MobEffects.WEAKNESS, BAD_REFINED_IDONITE_EFFECT_DUR, 2);
 
-    HashMap<String, Long> hashMap = new HashMap<>();
+    HashMap<String, Long> herbTimeHashMap = new HashMap<>();
     {
-        hashMap.put("kemp", 0L);
-        hashMap.put("kemp_powder", 0L);
-        hashMap.put("refined_kemp", 0L);
+        herbTimeHashMap.put("kemp", 0L);
+        herbTimeHashMap.put("kemp_powder", 0L);
+        herbTimeHashMap.put("refined_kemp", 0L);
 
-        hashMap.put("silver_speedberry", 0L);
-        hashMap.put("silver_speedberry_powder", 0L);
-        hashMap.put("refined_silver_speedberry", 0L);
+        herbTimeHashMap.put("silver_speedberry", 0L);
+        herbTimeHashMap.put("silver_speedberry_powder", 0L);
+        herbTimeHashMap.put("refined_silver_speedberry", 0L);
 
-        hashMap.put("idonite", 0L);
-        hashMap.put("idonite_powder", 0L);
-        hashMap.put("refined_idonite", 0L);
+        herbTimeHashMap.put("idonite", 0L);
+        herbTimeHashMap.put("idonite_powder", 0L);
+        herbTimeHashMap.put("refined_idonite", 0L);
     }
 
     public void setConsumedTime(String key, long time) {
-        this.hashMap.put(key, time);
+        this.herbTimeHashMap.put(key, time);
     }
 
     public long getConsumedTime(String key) {
-        return this.hashMap.get(key);
+        return this.herbTimeHashMap.get(key);
     }
 
 

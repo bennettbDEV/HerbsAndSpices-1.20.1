@@ -25,6 +25,8 @@
   "entity.minecraft.villager.balefulherbs.outcast": "Outcast",
 
   "tooltip.balefulherbs.silver_speedberry.tooltip": "Speeds you up!",
+  "tooltip.balefulherbs.herb_pulveriser.tooltip": "Crushes herbs",
+  "tooltip.balefulherbs.herb_shaper.tooltip": "Refines crushed herbs",
 
   "creativetab.balefulherbs_tab": "Baleful Herbs & Spices"
 }

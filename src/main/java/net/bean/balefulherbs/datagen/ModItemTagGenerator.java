@@ -1,9 +1,12 @@
 package net.bean.balefulherbs.datagen;
 
+import net.bean.balefulherbs.item.ModItems;
+import net.bean.balefulherbs.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,7 +20,22 @@ public class ModItemTagGenerator extends ItemTagsProvider
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
-
+    protected void addTags(HolderLookup.Provider pProvider)
+    {
+        this.tag(ModTags.Items.KEMP_ITEMS)
+                .add(ModItems.KEMP.get(),
+                        ModItems.KEMP_POWDER.get(),
+                        ModItems.REFINED_KEMP.get()
+                );
+        this.tag(ModTags.Items.SILVER_SPEEDBERRY_ITEMS)
+                .add(ModItems.SILVER_SPEEDBERRY.get(),
+                        ModItems.SILVER_SPEEDBERRY_POWDER.get(),
+                        ModItems.REFINED_SILVER_SPEEDBERRY.get()
+                );
+        this.tag(ModTags.Items.IDONITE_ITEMS)
+                .add(ModItems.IDONITE.get(),
+                        ModItems.IDONITE_POWDER.get(),
+                        ModItems.REFINED_IDONITE.get()
+                );
     }
 }

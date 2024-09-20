@@ -28,6 +28,7 @@ for the crops I add.
 <br />
 
 <h3>Some basic things to know </h3>
+
 - Kemp seeds can be obtained by breaking grass - with a small chance that the seeds actually drop
 - Silver Speedberry naturally generates in the world and can be found in the plains biome
 - Idonite generates naturally and can be found at any y-level under 40
@@ -45,7 +46,7 @@ for the crops I add.
 <br />
 For now, you can install and use the mod by following these steps:
 
-- Download balefulherbs-0.X-1.20.1.jar from the root directory of this project
+- Download balefulherbs-0.X-1.20.1.jar from <a href="https://github.com/bennettbDEV/HerbsAndSpices-1.20.1/releases">Releases</a> or from the root directory of this project
 - (Option 1) If you don't have Forge 1.20.1 installed already check out <a href="https://www.youtube.com/watch?v=VEyGJSE0XD8">this guide</a>
   - Then navigate to your mods folder and place the downloaded jar file within it
 - (Option 2) You can also add the jar file to an existing modpack using a modloader such as Curseforge
